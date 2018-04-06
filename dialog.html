@@ -1,0 +1,37 @@
+<html>
+<head>
+  <script type="text/javascript">
+    function alertdialog()
+    {
+      alert("This is Warning Message..");
+      document.write("Warning message display");
+    }
+    function confirmdialog()
+    {
+      var retval=confirm("Do you want to continue!");
+      if(retval==true)
+      {
+        document.write("User wants to continue");
+        //return true;
+      }
+      else
+        {
+          document.write("User does not want to continue");
+          //return false;
+        }
+    }
+      function promptdialog()
+      {
+        var retval1=prompt("you have entered :"+"user name");
+        document.write("Your name is :"+retval1);
+      }
+  </script>
+</head>
+<body>
+    <form>
+      <input type="button" value="ok" onclick="alertdialog()" />
+      <input type="button" value="Clickme" onclick="confirmdialog()" />
+      <input type="button" value="Clickme" onclick="promptdialog()" />
+    </form>
+</body>
+</html>
