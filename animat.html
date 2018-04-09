@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <script type="text/javascript">
+      var imgobj = null;
+      var animate;
+      function init()
+      {
+        imgobj=document.getElementById('image');
+        imgobj.style.position='relative';
+        imgobj.style.left='0px';
+      }
+      function moveright()
+      {
+        imgobj.style.left=parseInt(imgobj.style.left)+10+'px';
+        animate=setTimeOut(moveright,20);
+      }
+      function movestop()
+      {
+        clearTimeout(animate);
+        imgobj.style.left="15px";
+      }
+
+
+      if(document.images){
+               var image1 = new Image();
+               image1.src = "D:\harsha(Practice)\js\1.jpg";
+               var image2 = new Image();
+               image2.src = "D:\harsha(Practice)\js\2.jpg";
+            }
+      window.onload=init;
+  </script>
+</head>
+<body>
+  <form>
+<img id="image" src="D:\harsha(Practice)\js\1.jpg" /></br>
+<input type="button" value="start" onclick="moveright();" />
+<input type="button" value="stop" onclick="movestop();"
+
+<a href="#" onmouseover="document.img.src=1.jpg" onmouseout="document.img.src=2.jpg"></a>
+<img id="img" src="D:\harsha(Practice)\js\1.jpg" />
+
+</form>
+</body>
+</html>
