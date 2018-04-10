@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+</head>
+<body>
+  <p>
+    hi...follwing is the data..
+  </p>
+  <p id="demo"</p>
+
+    <script>
+
+
+    var myObj, x;
+    myObj = { "name":"John", "age":30, "car":null };
+    x = myObj.name;
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+
+  <p>
+    Good Morning..
+  </p>
+  <p id="demo1">
+
+  </p>
+    <script>
+      var obj1 = {"name" : "Om", "age" : 20,
+                  "City" :[
+                            { "region" : "Vishwasnagar","Room" : [3,10,23] }
+                            { "region" : "Ashoknagarf" , "Room" : [4,8,7] }
+                            { "region" : "Vastunagar" , "Room" : [0,9,1] }
+                          ] }
+      var i,j,y=" ";
+      for(i in obj1.City)
+      {
+        y=y+"<h2>"+obj1.City[i].region+"</h2>";
+          for(j in obj1.City[i].Room)
+          {
+            y=y+obj1.City[i].Room[j] +"</br>";
+          }
+
+      }
+      document.getElementById("demo1").innerHTML=y;
+
+
+</script>
+</body>
+</html>

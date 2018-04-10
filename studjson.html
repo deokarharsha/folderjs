@@ -1,0 +1,94 @@
+<html>
+<head>
+
+</head>
+<body>
+    <p>
+      <h2>Following is the students information :</h2>
+    </p>
+    <p id="demo"
+    </p>
+    <script type="text/javascript">
+            var obj,x=" ",i,j;
+            obj={"City" : "Nashik" ,
+                 "Std" : [
+                   {"Name" :"Sonu" , "Subject" : ["Math", "English","Marathi"]},
+                   {"Name" :"Aru" , "Subject" :["Bio" , "Physics" ,"Chemistry"]},
+                   {"Name" : "Munmun", "Subject" :["hindi","History","Geo"]}
+                         ]
+                }
+          for(i in obj.Std)
+          {
+              x=x+"<h2>"+obj.Std[i].Name+"</h2>";
+              for(j in obj.Std[i].Subject)
+              {
+                x=x+obj.Std[i].Subject[j]+"</br>";
+              }
+          }
+          document.getElementById("demo").innerHTML=x;
+    </script>
+    <p id="demo1"
+    </p>
+    <script>
+      var myObj = { "name":"John", "age":30, "car":null };
+      document.getElementById("demo1").innerHTML="<h2>Displaying whole data in array :</h2></br>";
+      for(x in myObj)
+      {
+        document.getElementById("demo1").innerHTML+=x+":"+myObj[x]+"</br>";
+      }
+      </script>
+
+      <p id="demo2"
+      </p>
+      <p id="demo3"
+      </p>
+      <p id="demo4"
+      </p>
+      <p id="demo5"
+      </p>
+        <script>
+      var  myObj1= { "name":"monu",
+                 "age":20,
+                 "cars":[ "Ford", "BMW", "Fiat" ]
+                 };
+      x = myObj1.cars[0];
+      document.getElementById("demo2").innerHTML ="<h2>Displaying first element of array :</h2>"+ x;
+
+      for(i in myObj1.cars)
+      {
+        x=x+myObj1.cars[i]+"</br>";
+      }
+
+      document.getElementById("demo3").innerHTML ="<h2>Displaying sub element in array of array by looping :</h2>"+x;
+      </script>
+      <script>
+      var  myObj1= { "name":"monu",
+                 "age":20,
+                 "cars":[ "Ford", "BMW", "Fiat" ]
+                 };
+      var x=" ",i;
+      myObj1.cars[1] = "Mercedes";
+
+      for (i in myObj1.cars)
+      {
+        x+= myObj1.cars[i] + "<br>";
+      }
+
+      document.getElementById("demo4").innerHTML ="<h2>Modifying data in an array :</h2>"+x;
+      </script>
+      <script>
+      var  myObj1= { "name":"monu",
+                 "age":20,
+                 "cars":[ "Ford", "BMW", "Fiat" ]
+                 };
+      var x=" ",i;
+      delete myObj1.cars[1];
+      for (i in myObj1.cars)
+      {
+         x += myObj1.cars[i] + "<br>";
+      }
+
+      document.getElementById("demo5").innerHTML ="<h2>Displaying deleting element in array :</h2>"+x;
+    </script>
+</body>
+</html>
